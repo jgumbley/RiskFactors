@@ -14,6 +14,7 @@ Data structures
 
 Use firebase cloudstore schema concepts 'collections' (⇱) and 'maps' (⌌).
 
+```
 ⇱ Risks
  ⌌ Risk
    ⌌ LossEventFrequency
@@ -36,6 +37,7 @@ Use firebase cloudstore schema concepts 'collections' (⇱) and 'maps' (⌌).
    ⊳ Data used to inform (historical events, logs, external sources)
    ⊳ Controls considered
    ⊳ Remaining uncertainty
+```
 
 Algorithms
 ----------
