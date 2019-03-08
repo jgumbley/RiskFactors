@@ -8,7 +8,10 @@
     "source": "functions"
   },
   "hosting": {
-    "public": "public",
+    "public": "dashboard/build",
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\"/.. run-script build"
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
