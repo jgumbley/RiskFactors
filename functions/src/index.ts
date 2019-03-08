@@ -14,7 +14,10 @@ main.use(bodyParser.urlencoded({ extended: false }));
 // webApi is your functions name, and you will pass main as 
 export const webApi = functions.https.onRequest(main);
 
+// lets say yo blair
+export const hello = () => 'Yo Blair!';
+
 // wiring things up
 app.post('/helloworld', (req, res) => {
-    res.send('Yo blair');
+    res.send(hello());
 })
