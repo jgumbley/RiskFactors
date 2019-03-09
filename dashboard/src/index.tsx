@@ -14,6 +14,16 @@ import * as firebase from "firebase";
 */
 firebase.initializeApp(firebaseConfig);
 
+var functions = firebase.functions();
+
+var callableFunction = functions.httpsCallable('callable');
+
+callableFunction().then(function(result) {
+    // Read result of the Cloud Function.
+    console.log(JSON.stringify(result));
+  });
+
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
