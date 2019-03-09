@@ -4,10 +4,11 @@ Rationale
 "Managers at many levels are just bursting with probabilistic knowledge, which if properly channeled can be put to good use."
  - Sam Savage, The Flaw of Averages
 
-Estimate (from user input) hrad data /soft data / sme estimates 
-vs Derive (from Data)
+Use Estimates (numbers taken from user input, based on hard data, soft data, subject matter expertise)
 
-frequency over standard unit of time, usually a year
+Derive from real data (although needs to be right type)
+
+Frequency should be over standard unit of time, usually a year
 
 Data structures
 ---------------
