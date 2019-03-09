@@ -15,3 +15,6 @@ deploy:
 	firebase deploy --project $(FB_APP)
 	$(call green,"[Done]")
 
+.PHONY: cypress
+cypress:
+	cd dashboard; ./node_modules/.bin/cypress open

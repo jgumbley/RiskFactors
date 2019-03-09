@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as firebase from "firebase";
-import { Table } from 'reactstrap';
+import { Table, Button } from 'reactstrap';
 import { any } from 'prop-types';
 
 class App extends Component {
@@ -11,7 +11,18 @@ class App extends Component {
             <p className="navbar-dark navbar-brand col-sm-3 col-md-2 mr-0">RiskFactors</p>
           </nav>
           <RiskTable/>
+          <AddRiskButton/>
       </div>
+    );
+  }
+}
+
+class AddRiskButton extends Component {
+  render() {
+    return (
+      <Button type="button" 
+              data-test="addrisk" 
+              className="btn btn-secondary">Add Risk</Button>
     );
   }
 }
@@ -20,6 +31,7 @@ class RiskTable extends Component {
   state = {
     message: "loading"
   }
+
   componentWillMount() {
     var callableFunction = firebase.functions().httpsCallable('callable');
     callableFunction()
