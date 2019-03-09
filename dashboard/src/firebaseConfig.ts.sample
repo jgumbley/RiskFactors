@@ -1,3 +1,8 @@
+/*  API key for dev is here
+    it is not a secret, it can't be due to the way javascript in the browser works
+    TODO: will need to alter (webpack transform?) with other environments
+    TODO: need to ensure that server side security rules are configured when data is added
+*/
 var config = {
     apiKey: "Here",
     authDomain: "here",

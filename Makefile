@@ -6,6 +6,7 @@ FB_APP=riskfactors-dev
 
 .PHONY: local
 local:
+	cd dashboard; npm run build
 	firebase serve --project $(FB_APP)
 	$(call green,"[Done]")
 
