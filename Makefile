@@ -8,11 +8,16 @@ FB_APP=riskfactors-dev
 install:
 	cd dashboard; npm install
 	cd functions; npm install
+	$(call green,"[Done]")
 
+.PHONY: local
 local:
+	cd dashboard; npm start
+
+.PHONY: prodlocal
+prodlocal:
 	cd dashboard; npm run build
 	firebase serve --project $(FB_APP)
-	$(call green,"[Done]")
 
 .PHONY: deploy
 deploy:

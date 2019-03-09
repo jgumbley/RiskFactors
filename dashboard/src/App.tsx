@@ -18,11 +18,46 @@ class App extends Component {
 }
 
 class AddRiskButton extends Component {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+     threat: "hello there",
+     scope: "mr ed",
+     loss: "the talking horse"
+    };
+  }
+
+  handleClick() {
+    console.log("hello");
+    firebase.firestore().collection("users").add({
+      fullname: "hello",
+      email: "hello" 
+    });  
+  }
+
   render() {
     return (
+      <form>
+          <input
+            type="text"
+            name="threat"
+            placeholder="Threat"
+          />
+          <input
+            type="text"
+            name="scope"
+            placeholder="Scope"
+          />
+          <input
+            type="text"
+            name="loss"
+            placeholder="Loss"
+          />
       <Button type="button" 
               data-test="addrisk" 
+              onClick={this.handleClick}
               className="btn btn-secondary">Add Risk</Button>
+        </form>
     );
   }
 }
