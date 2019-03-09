@@ -17,7 +17,7 @@ class App extends Component {
   }
 }
 
-class AddRiskButton extends Component {
+class AddRiskButton extends Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -25,13 +25,15 @@ class AddRiskButton extends Component {
      scope: "mr ed",
      loss: "the talking horse"
     };
+    
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    console.log("hello");
-    firebase.firestore().collection("users").add({
-      fullname: "hello",
-      email: "hello" 
+    firebase.firestore().collection("Risks").add({
+      threat: this.state.threat,
+      scope: this.state.scope,
+      loss: this.state.loss 
     });  
   }
 
