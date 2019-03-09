@@ -1,0 +1,10 @@
+var config = {
+    apiKey: "Here",
+    authDomain: "here",
+    databaseURL: "here",
+    projectId: "here",
+    storageBucket: "here",
+    messagingSenderId: "here"
+  }
+
+ export default config

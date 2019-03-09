@@ -1,3 +1,6 @@
+# lets not have secrets in source
+dashboard/src/firebaseConfig.ts
+
 # Logs
 logs
 *.log
