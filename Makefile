@@ -4,7 +4,11 @@ endef
 
 FB_APP=riskfactors-dev
 
-.PHONY: local
+.PHONY: install
+install:
+	cd dashboard; npm install
+	cd functions; npm install
+
 local:
 	cd dashboard; npm run build
 	firebase serve --project $(FB_APP)
