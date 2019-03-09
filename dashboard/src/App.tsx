@@ -18,22 +18,16 @@ class App extends Component {
 
 class RiskTable extends Component {
   state = {
-    message: "whats up"
+    message: "loading"
   }
   componentWillMount() {
     var callableFunction = firebase.functions().httpsCallable('callable');
-    var output = callableFunction()
-     .then( result => {
-        // Read result of the Cloud Function.
-        console.log("who is your palos, yes palos");
-        var helloworld = result.data["result"];
-        console.log(helloworld);
-        this.setState({message: helloworld});
-        return helloworld;
-        }
-        );
-    console.log(output);
+    callableFunction()
+     .then( 
+       result => { this.setState({message: result.data["result"]});}
+       );
   }
+
   render() {
     return (
       <Table>
