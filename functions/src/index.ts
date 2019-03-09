@@ -19,5 +19,5 @@ export const hello = () => 'Yo Blair!';
 
 // wiring things up
 app.post('/helloworld', (req, res) => {
-    res.send(hello());
+    res.json(hello());
 })

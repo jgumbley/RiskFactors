@@ -17,7 +17,9 @@ Use firebase cloudstore schema concepts 'collections' (⇱) and 'maps' (⌌).
 ```
 ⇱ Risks
  ⌌ Risk
-   ⌌ LossEventFrequency
+   ⌌ Scope
+    ⊳ Description
+   ⌌ ThreatFrequency
      ⌌ ThreatEventFrequency
      ⌌ ThreatForce
      ⌌ ThreatResistance
