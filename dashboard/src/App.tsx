@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import * as firebase from "firebase";
 import { Table, Button } from 'reactstrap';
-import { any } from 'prop-types';
 
 class App extends Component {
   render() {
@@ -66,7 +65,8 @@ class AddRiskButton extends Component<any, any> {
 
 class RiskTable extends Component {
   state = {
-    message: "loading"
+    message: "loading",
+    risks: []
   }
 
   componentWillMount() {
@@ -75,6 +75,34 @@ class RiskTable extends Component {
      .then( 
        result => { this.setState({message: result.data["result"]});}
        );
+    
+    firebase.firestore().collection("Risks").get()
+     .then(
+       result => { 
+         const risks: firebase.firestore.DocumentData[] = [];
+         result.forEach(risk => {
+                    risks.push(risk.data())
+                  });
+         this.setState({ risks: risks });
+         console.log(risks);
+        });
+  }
+
+  renderItems() {
+    const listOfRisks = this.state.risks.map(
+      (risk, index)  => {
+        return (
+          <tr key={index}>
+            <th scope="row">{ index }</th>
+            <td>{ risk["scope"] } </td>
+            <td>{ risk["threat"] } </td>
+            <td>{ risk["loss"] } </td>
+          </tr>
+        )
+      });
+    return (
+      <tbody>{ listOfRisks}</tbody>
+    );
   }
 
   render() {
@@ -83,19 +111,12 @@ class RiskTable extends Component {
         <thead>
           <tr>
             <th>#</th>
-            <th>Threat</th>
             <th>Scope</th>
+            <th>Threat</th>
             <th>Loss</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Todo</td>
-            <td>{ this.state.message }</td>
-            <td>Todo</td>
-          </tr>
-        </tbody>
+        { this.renderItems() }
       </Table>
     );
   }

@@ -4,6 +4,6 @@ describe('As an infosec lead I create a risk', function() {
 
         cy.get('[data-test="addrisk"]').click();
 
-        cy.contains("Enter risk");
+        cy.contains("the talking horse");
       })
   })
