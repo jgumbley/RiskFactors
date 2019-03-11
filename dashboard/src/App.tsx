@@ -84,7 +84,6 @@ class RiskTable extends Component {
                     risks.push(risk.data())
                   });
          this.setState({ risks: risks });
-         console.log(risks);
         });
   }
 
