@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './.declare_modules.d';
+import 'materialize-css/dist/css/materialize.min.css'
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import firebaseConfig from './firebaseConfig';

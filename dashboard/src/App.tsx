@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as firebase from "firebase";
-import { Table, Button } from 'reactstrap';
+import { Table, Button } from 'react-materialize';
 import { Chart } from "react-google-charts";
 
 class App extends Component {
