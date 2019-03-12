@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import * as firebase from "firebase";
 import { Table, Button } from 'reactstrap';
+import { Chart } from "react-google-charts";
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -11,6 +13,35 @@ class App extends Component {
           </nav>
           <RiskTable/>
           <AddRiskButton/>
+          <Chart
+      chartType="ScatterChart"
+      rows={[[8, 12], [4, 5.5], [11, 14], [4, 5], [3, 3.5], [6.5, 7]]}
+      columns={[
+        {
+          type: "number",
+          label: "Age"
+        },
+        {
+          type: "number",
+          label: "Weight"
+        }
+      ]}
+      options={
+        // Chart options
+        {
+          title: "Age vs. Weight comparison",
+          hAxis: {
+            title: "Age",
+            viewWindow: { min: 0, max: 15 }
+          },
+          vAxis: { title: "Weight", viewWindow: { min: 0, max: 15 } },
+          legend: "none"
+        }
+      }
+      width={"100%"}
+      height={"400px"}
+      legendToggle
+    />
       </div>
     );
   }
