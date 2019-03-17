@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "11"
 env:
-  - cypress_host=laura.dev.local
+  - cypress_host=https://riskfactors-dev.firebaseapp.com/
