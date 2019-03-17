@@ -1,3 +1,5 @@
 language: node_js
 node_js:
   - "11"
+env:
+  - cypress_host=laura.dev.local

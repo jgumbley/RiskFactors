@@ -44,3 +44,9 @@ deploy:
 .PHONY: cypress
 cypress:
 	cd dashboard; ./node_modules/.bin/cypress open
+
+.PHONY: clean
+clean:
+	rm -Rf acceptance/node_modules
+	rm -Rf dashboard/node_modules
+	rm -Rf functions/node_modules
