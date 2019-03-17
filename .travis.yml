@@ -13,6 +13,7 @@ jobs:
         provider: firebase
         token:
           secure: "dLe79+8/E/pEOofRW2unDTvjuN2j6+D2WlVic4PsKCPdCXnX5Jgixvf5XIgNnie1ykiIIRF6J4yq1pl6RR+kvP6Bbw/o0n1MqlFkjubNgOHsibs6YI/kr9fWY9jUlMBMxU+5USqb2Onwiy51djV64zisXPo701f5Tq+kSjn93N0qquBu1zYXqmo4sBb/t2SE/qlcWnyJW3LmvXekDs1jpZAZRfiVBd54o5T7FlydYvchiacDpc9XHe1U4QCEMwZB8nlnoJge/WhpuL5fMf/7351clrIpbeAszdN+EKXuySR17AoAGEOf0FgHhQLfyUrV1MeCOSqWg9UbEG9v+BI3XGVNhU6YSuc00+qG0OqZc0LIJir0ZBJbm76ACWhYpvpQcmAsUks3TMnyF2KLBuDx1Rcw2hL1MZ2Eq7bhkdpY2v/wH+KfWjpeZyM0ZfcxBcXJVv2cEYAuZuDbLi74INTha50GXnmrrABrpY4mnJ+EnpTcI2wloRQkIlo1zhBMMRUMhstmkqDmojFQFgTYUqBkWFkUj8nuRVFLe3D+lTBRKAX+O84G0jYSdI7DfrrN7ZvWmpikk7/LpMxAcjkYRY4JMNYbJo3Y8vWDBhln0f9eMFIBPHSFk/nmjN4l1rEiohGIypbTgFIsQ9uapyyZu8IAqCKWHeKDaePJUAN1uuAoNPU="
+        project: "riskfactors-dev"
         message: "your message"
     - stage: accept
       script: make accept
