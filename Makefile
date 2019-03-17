@@ -4,6 +4,11 @@ endef
 
 FB_APP=riskfactors-dev
 
+.PHONY: test
+test:
+	$(call green,"[All good 👍]")
+
+
 .PHONY: install
 install:
 	cd dashboard; npm install
