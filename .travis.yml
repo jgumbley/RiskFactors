@@ -3,3 +3,14 @@ node_js:
   - "11"
 env:
   - cypress_host=https://riskfactors-dev.firebaseapp.com/
+jobs:
+  include:
+    - script: make unit
+    - stage: deploy
+      script: skip
+      deploy: &firebase
+        provider: firebase
+        token:
+          secure: "YOUR ENCRYPTED token"
+        message: "your message"
+    - script: make accept

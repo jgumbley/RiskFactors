@@ -10,23 +10,23 @@ functions/node_modules:
 	cd acceptance; npm ci;
 
 .PHONY: test
-test: functions/node_modules
+test: unit accept
 	# Make sure everything works from the very top, to the bottom
+	$(call green,"[All good 👍]")
+
+.PHONY: unit
+unit: functions/node_modules
 	# 1. All the functions work as expected
 	cd functions; npm test
 	# 2. The UI components pass their lower layer tests
 	cd dashboard; export CI=true; npm test --no-watch
 	# 3. The datastore rules secure the system appropriately
+	# TODO
+
+.PHONY: accept
+accept:
 	# 4. Then (deploy?) and run the end to end tests
 	cd acceptance; ./node_modules/.bin/cypress run
-	$(call green,"[All good 👍]")
-
-
-.PHONY: install
-install:
-	cd dashboard; npm install
-	cd functions; npm install
-	$(call green,"[Done]")
 
 .PHONY: local
 local:
