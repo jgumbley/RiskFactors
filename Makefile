@@ -4,8 +4,11 @@ endef
 
 FB_APP=riskfactors-dev
 
+functions/node_modules:
+	cd functions; npm ci;
+
 .PHONY: test
-test:
+test: functions/node_modules
 	# Make sure everything works from the very top, to the bottom
 	# 1. All the functions work as expected
 	cd functions; npm test
