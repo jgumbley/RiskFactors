@@ -1,5 +1,5 @@
 {
     "env": {
-        "host": "http://locahost:3000"
+        "host": "localhost:3000"
       }
 }

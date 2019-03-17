@@ -15,6 +15,7 @@ test: functions/node_modules
 	# 1. All the functions work as expected
 	cd functions; npm test
 	# 2. The UI components pass their lower layer tests
+	cd dashboard; export CI=true; npm test --no-watch
 	# 3. The datastore rules secure the system appropriately
 	# 4. Then (deploy?) and run the end to end tests
 	cd acceptance; ./node_modules/.bin/cypress run

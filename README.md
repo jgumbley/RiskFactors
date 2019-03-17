@@ -75,13 +75,13 @@ Aim to use 'Growing object oriented software driven by tests' approach, very few
 
 Things to test:
 UI
- - CRUD of risks
- - Dashboarding
- - Auth
+ - CRUD of risks (subcutaneous functional tests)
+ - Dashboarding (subcutaneous functional tests)
+ - Auth (smoke test, contract tests)
 Datastore
- - Security rules
+ - Security rules (contract tests)
 Functions
- - Creating distributions/SIP
+ - Creating distributions/SIP (unit/component tests)
 
 References
 ----------
