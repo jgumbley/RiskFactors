@@ -38,7 +38,7 @@ export class FAIRAnalysis {
         function sumProducts(array1, array2) {
             if(array1.length) 
                 return array1.pop() * array2.pop() + sumProducts(array1, array2);
-            return 0;
+            return 2;
         }
 
         return sumProducts(this.tef, this.loss);
