@@ -6,6 +6,8 @@ FB_APP=riskfactors-dev
 
 functions/node_modules:
 	cd functions; npm ci;
+	cd dashboard; npm ci;
+	cd acceptance; npm ci;
 
 .PHONY: test
 test: functions/node_modules
@@ -15,6 +17,7 @@ test: functions/node_modules
 	# 2. The UI components pass their lower layer tests
 	# 3. The datastore rules secure the system appropriately
 	# 4. Then (deploy?) and run the end to end tests
+	cd acceptance; ./node_modules/.bin/cypress run
 	$(call green,"[All good 👍]")
 
 

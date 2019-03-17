@@ -74,13 +74,13 @@ Testing
 Aim to use 'Growing object oriented software driven by tests' approach, very few high level and slow happy path acceptance tests supported by well composed components with enough targetted subcutaneous tests. Aim to test drive functionality but not being religous about it. Seeing the value of testing as supporting good program structure and easing integration, in addition to correctness.
 
 Things to test:
-- UI
+UI
  - CRUD of risks
  - Dashboarding
  - Auth
-- Datastore
+Datastore
  - Security rules
-- Functions
+Functions
  - Creating distributions/SIP
 
 References

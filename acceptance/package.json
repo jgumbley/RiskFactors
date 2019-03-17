@@ -1,0 +1,16 @@
+{
+  "name": "acceptance",
+  "version": "1.0.0",
+  "description": "Package for acceptance testing of RiskFactors",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cypress/webpack-preprocessor": "^4.0.3",
+    "cypress": "^3.2.0",
+    "webpack": "^4.29.6"
+  }
+}
